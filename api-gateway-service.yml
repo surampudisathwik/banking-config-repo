@@ -12,6 +12,10 @@ spring:
           uri: lb://ACCOUNT-SERVICE
           predicates:
             - Path= /api/account/**
+        - id: AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path= /api/authenticate/user/**
 server:
   port: 9191
 management:
